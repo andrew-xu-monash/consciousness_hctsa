@@ -18,16 +18,16 @@
 #SBATCH --cpus-per-task=1
 
 # Memory usage (MB)
-#SBATCH --mem-per-cpu=2000
+#SBATCH --mem-per-cpu=8000
 
 # Set your minimum acceptable walltime, format: day-hours:minutes:seconds
-#SBATCH --time=03:00:00
+#SBATCH --time=10:00:00
 # SBATCH --qos=shortq
 #SBATCH --partition=comp
 
 # To receive an email when job completes or fails
 #SBATCH --mail-user=dxuu0007@student.monash.edu
-#SBATCH --m ail-type=END
+#SBATCH --mail-type=END
 #SBATCH --mail-type=FAIL
 
 # Set the file for output (stdout)
@@ -41,4 +41,4 @@
 
 # Job script
 module load matlab/r2021a
-time matlab -nodisplay -nodesktop -r "add_toolbox; hctsa_compute('k_a_hctsa.mat'); exit"
+time matlab -nodisplay -nodesktop -r "addToolbox; hctsa_compute('HCTSA.mat'); exit"
