@@ -2,8 +2,9 @@
 myStartingDir = pwd;
 
 % Load paths for the hctsa package
-cd('~/hctsa')
-startup
+cd('~/qb48_scratch/dxuu0007')
+toolbox_dir = 'toolboxes/';
+addpath(genpath(toolbox_dir));
 
 % Move Matlab back to the working PBS directory
 cd(myStartingDir)
