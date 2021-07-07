@@ -4,10 +4,7 @@ function [] = hctsa_compute(hctsa_mat)
 % Inputs:
 %   hctsa_mat = string; initalised hctsa .mat file
 
-hctsa_dir = 'hctsa_data/';
-
-nCores = feature('numcores');
-parpool(nCores);
+hctsa_dir = 'data/';
 
 TS_Compute(true, [], [], [], [hctsa_dir hctsa_mat]);
 

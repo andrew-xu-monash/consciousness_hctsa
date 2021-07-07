@@ -1,4 +1,3 @@
-
 #!/bin/bash
 # Usage: sbatch slurm-serial-job-script
 # Prepared By: Kai Xi,  Oct 2014
@@ -7,28 +6,28 @@
 # $1: line counter
 # Need to use variables OUTSIDE of this script, #SBATCH doesn't support variables: https://help.rc.ufl.edu/doc/Using_Variables_in_SLURM_Jobs
 
-SBATCH --job-name=train_hctsa
+#SBATCH --job-name=train_hctsa
 
 # To set a project account for credit charging, 
-SBATCH --account=bp48
+#SBATCH --account=qb48
 
 # Request CPU resource for a serial job
 #SBATCH --ntasks=1
 #SBATCH --ntasks-per-node=1
 # SBATCH --exclusive
-#SBATCH --cpus-per-task=36
+#SBATCH --cpus-per-task=1
 
 # Memory usage (MB)
 #SBATCH --mem-per-cpu=2000
 
 # Set your minimum acceptable walltime, format: day-hours:minutes:seconds
-#SBATCH --time=2-0:00:00
+#SBATCH --time=03:00:00
 # SBATCH --qos=shortq
-# SBATCH --partition=short,comp
+#SBATCH --partition=comp
 
 # To receive an email when job completes or fails
-#SBATCH --mail-user=aleu6@student.monash.edu
-#SBATCH --mail-type=END
+#SBATCH --mail-user=dxuu0007@student.monash.edu
+#SBATCH --m ail-type=END
 #SBATCH --mail-type=FAIL
 
 # Set the file for output (stdout)
@@ -42,4 +41,4 @@ SBATCH --account=bp48
 
 # Job script
 module load matlab/r2021a
-time matlab -nodisplay -nodesktop -r "add_toolbox; hctsa_compute('k_a_compute.mat'); exit"
+time matlab -nodisplay -nodesktop -r "add_toolbox; hctsa_compute('k_a_hctsa.mat'); exit"
