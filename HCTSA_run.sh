@@ -7,7 +7,7 @@
 tsMin=1
 tsMax=9840
 # Set number of time series to calculate per job
-numPerJob=1000
+numPerJob=100
 # -------------------------------------------
 
 # Calculate the number of jobs required

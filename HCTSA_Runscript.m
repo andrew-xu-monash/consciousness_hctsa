@@ -18,10 +18,17 @@ tsid_max = 9840; % To this ts_id
 % ------------------------------------------------------------------------------
 %% Default parameters for computation:
 % ------------------------------------------------------------------------------
-nSeriesPerGo = 20;
-useParralel = false;
+nSeriesPerGo = 36;
+useParralel = true;
 opRange = [];
 customFile = 'HCTSA_subset.mat';
+
+
+%-------------------------------------------------------------------------------
+% Defining number of cores available for partitioning
+%-------------------------------------------------------------------------------
+nCores = feature('numcores');
+parpool(nCorese);
 
 %-------------------------------------------------------------------------------
 % Make the required subset from the master HCTSA file:
