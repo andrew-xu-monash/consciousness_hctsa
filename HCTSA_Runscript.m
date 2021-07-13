@@ -28,7 +28,7 @@ customFile = 'HCTSA_subset.mat';
 % Defining number of cores available for partitioning
 %-------------------------------------------------------------------------------
 nCores = feature('numcores');
-parpool(nCorese);
+parpool(nCores);
 
 %-------------------------------------------------------------------------------
 % Make the required subset from the master HCTSA file:
