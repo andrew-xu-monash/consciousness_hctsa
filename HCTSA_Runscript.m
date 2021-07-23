@@ -18,7 +18,7 @@ tsid_max = 9840; % To this ts_id
 % ------------------------------------------------------------------------------
 %% Default parameters for computation:
 % ------------------------------------------------------------------------------
-nSeriesPerGo = 36;
+nSeriesPerGo = 18;
 useParralel = true;
 opRange = [];
 customFile = 'HCTSA_subset.mat';
